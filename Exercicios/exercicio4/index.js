@@ -15,12 +15,6 @@ for(let i = 1; i <= 20; i++){
     media = media += parseFloat(salary);
     mSon = mSon += parseInt(sons);
 
-for(let i = 1; i <= 4; i++){
-    salary = prompt("Digite seu salario");
-    sons = prompt("Quantos filhos você tem?")
-    media = media += parseFloat(salary)
-    mSon = mSon += parseInt(sons)
-
     if(salary > mSalary){
         mSalary = salary
     }
