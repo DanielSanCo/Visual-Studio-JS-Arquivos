@@ -51,12 +51,11 @@ alert(toCelsius(faren));
 a função deverá receber os  seguintes parâmetros, peso e altura.
 */
 
-/*
+
 let peso = prompt("Digite o peso");
 let altura = prompt("Digite a altura");
-const calcImc = (p, h) => {
+function calcImc (p, h) {
     result = p / (h*h);
-    return (alert(result.toFixed(2)));
+    return (result.toFixed(2));
 }
-calcImc(peso, altura)
-*/
+alert(calcImc(peso, altura));
