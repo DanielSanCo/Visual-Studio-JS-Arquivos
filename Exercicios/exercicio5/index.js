@@ -103,7 +103,7 @@ alert(Menor(n1, n2, n3))
 
 /*
     2 - Faça um programa com uma função chamada somaImposto. A função possui dois parâmetros 
-    formais: 'taxaImposto', que é a quantia de imposto sobre vendas expressa em porcentagem e o 'custo', 
+    formais: 'taxaImposto', que é a quantia de imposto sobre vendas expressa em porcentagem. e o 'custo', 
     que é o custo de um item antes do imposto. A função “altera” o valor de custo para incluir o 
     imposto sobre vendas.
 */
@@ -135,10 +135,12 @@ let h, m
 h = prompt("Digite a hora")
 m = prompt("Digite o minuto")
 function Convercao(dd1, dd2) {
-    if(dd1 > 12){
+    if(dd1 > 12 && dd1 < 24 && dd2 >= 0 && dd2 <= 59){
         return(dd1-12 + ":" + dd2 + " P.M.")
-    }else{
+    }else if(dd1 <= 12 && dd2 >= 0 && dd2 <= 59){
         return(dd1 + ":" + dd2 + " A.M.")
+    }else if(dd1 <= 0 || dd1 > 24 || dd2 <= 0 || dd2 > 59){
+        return("Há algum valor invalido")
     }
 }
 alert(Convercao(h, m))
@@ -169,10 +171,10 @@ console.log(Calculo(n1, n2));
 Por exemplo, se a entrada for 2, a função deverá retornar “fevereiro”, pois este é o 2° mês.
 */
 
-/*
+
 let num
 num = prompt("Digite o numero do mês")
-const Mes = (n) => {
+function Mes (n) {
     let mes
 
     switch(n){
@@ -214,7 +216,7 @@ const Mes = (n) => {
         break;
     }
 
-    return (mes)
+    return (alert(mes))
 }
 
-alert(Mes(num))*/
+Mes(num);
